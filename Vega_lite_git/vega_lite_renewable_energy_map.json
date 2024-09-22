@@ -1,0 +1,1120 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Map of Renewable Energy Projects in Australia",
+    "title": "Renewable Energy in Australia",
+    "width": 800,
+    "height": 600,
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/FIT3179/Vega-Lite/main/2_symbol_map/js/ne_110m_admin_0_countries.topojson",
+          "format": {
+            "type": "topojson",
+            "feature": "ne_110m_admin_0_countries"
+          }
+        },
+        "mark": {
+          "type": "geoshape",
+          "fill": "lightgray",
+          "stroke": "white"
+        },
+        "projection": {
+          "type": "mercator",
+          "center": [134.0, -25.0],
+          "scale": 1000
+        }
+      },
+      {
+        "data": {
+          "values": [
+            {
+              "title": "A low emission biofuel technology",
+              "project-value": 12891182.0,
+              "technology": "Bioenergy",
+              "lat": -31.9535132,
+              "lon": 115.8570471
+            },
+            {
+              "title": "Advanced biomass gasification technology",
+              "project-value": 6729553.0,
+              "technology": "Bioenergy",
+              "lat": -31.9520044,
+              "lon": 115.8574693
+            },
+            {
+              "title": "Advanced solar thermal energy storage technologies",
+              "project-value": 9110702.0,
+              "technology": "Solar energy",
+              "lat": -32.926689,
+              "lon": 151.7789205
+            },
+            {
+              "title": "Advanced steam-generating receivers for high concentration solar collectors",
+              "project-value": 5979428.0,
+              "technology": "Solar energy",
+              "lat": -32.926689,
+              "lon": 151.7799205
+            },
+            {
+              "title": "Advanced surface and contact technologies improving solar cells",
+              "project-value": 15842952.0,
+              "technology": "Solar energy",
+              "lat": -35.282,
+              "lon": 149.128684
+            },
+            {
+              "title": "Advancing marine microalgae biofuel to commercialisation",
+              "project-value": 10738000.0,
+              "technology": "Bioenergy",
+              "lat": -33.0343994,
+              "lon": 137.5849148
+            },
+            {
+              "title": "AGL Solar Project",
+              "project-value": 439082000.0,
+              "technology": "Solar energy",
+              "lat": -31.5630285,
+              "lon": 147.1961571
+            },
+            {
+              "title": "Analysis of variations in instantaneous weather effects",
+              "project-value": 539405.0,
+              "technology": "Solar energy",
+              "lat": -23.7002104,
+              "lon": 133.8806114
+            },
+            {
+              "title": "The Australian Renewable Energy Mapping Infrastructure (AREMI) project",
+              "project-value": 3180000.0,
+              "technology": "Renewable energy industry capacity building",
+              "lat": -35.281396,
+              "lon": 149.124917
+            },
+            {
+              "title": "Towards an Australian capability in arrays of ocean wave-power machines",
+              "project-value": 1501529.0,
+              "technology": "Ocean energy",
+              "lat": -37.821901,
+              "lon": 145.038944
+            },
+            {
+              "title": "ASTRI - Australian Solar Thermal Research Initiative",
+              "project-value": 87300000.0,
+              "technology": "Solar energy",
+              "lat": -32.883327,
+              "lon": 151.72875
+            },
+            {
+              "title": "Australia-US Institute for Advanced Photovoltaics",
+              "project-value": 88500000.0,
+              "technology": "Solar energy",
+              "lat": -33.8774869,
+              "lon": 151.2059902
+            },
+            {
+              "title": "Australian feedstock and refining capacity to produce Sustainable Aviation Fuel (SAF)",
+              "project-value": 950000.0,
+              "technology": "Bioenergy",
+              "lat": -33.8774869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Australian pilot of rooftop CST and CPV-T micro-concentrator solar energy systems",
+              "project-value": 9300000.0,
+              "technology": "Solar energy",
+              "lat": -36.1277236,
+              "lon": 144.7494973
+            },
+            {
+              "title": "Australian Solar Energy Forecasting System (ASEFS) - Phase 1",
+              "project-value": 7600000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -35.27614,
+              "lon": 149.148
+            },
+            {
+              "title": "Australian Wave Energy Atlas",
+              "project-value": 3286800.0,
+              "technology": "Ocean energy",
+              "lat": -42.881903,
+              "lon": 147.323814
+            },
+            {
+              "title": "Barcaldine Remote Community Solar Farm",
+              "project-value": 69000000.0,
+              "technology": "Solar energy",
+              "lat": -23.5524673,
+              "lon": 145.2885214
+            },
+            {
+              "title": "Biomass to bio-crude: Producing advanced drop-in fuels for Australia",
+              "project-value": 7296256.0,
+              "technology": "Bioenergy",
+              "lat": -33.8386344,
+              "lon": 151.2071142
+            },
+            {
+              "title": "bioWAVE Ocean Pilot at Port Fairy",
+              "project-value": 21000000.0,
+              "technology": "Ocean energy",
+              "lat": -38.3841733,
+              "lon": 142.2369225
+            },
+            {
+              "title": "Cane2Fuel: Feasibility of producing biofuel from sugarcane waste",
+              "project-value": 1947985.0,
+              "technology": "Bioenergy",
+              "lat": -27.4978313,
+              "lon": 152.9725538
+            },
+            {
+              "title": "Carnegie CETO 6 technology",
+              "project-value": 46000000.0,
+              "technology": "Ocean energy",
+              "lat": -32.2429551,
+              "lon": 115.6986301
+            },
+            {
+              "title": "Central receiver CPV pilot project - Stage 2",
+              "project-value": 3600000.0,
+              "technology": "Solar energy",
+              "lat": -36.7401231,
+              "lon": 143.8995131
+            },
+            {
+              "title": "Characterising and forecasting grid connected solar energy",
+              "project-value": 830000.0,
+              "technology": "Solar energy",
+              "lat": -33.8684869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Clean Energy Australia - Annual Renewable Energy Industry Analysis",
+              "project-value": 199100.0,
+              "technology": "Renewable energy industry capacity building",
+              "lat": -37.8109046,
+              "lon": 144.9702971
+            },
+            {
+              "title": "Climate-based PV performance and reliability",
+              "project-value": 579320.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -33.9174103,
+              "lon": 151.2313068
+            },
+            {
+              "title": "Commercialisation roadmap for perovskite solar cells",
+              "project-value": 1421473.0,
+              "technology": "Solar energy",
+              "lat": -35.3549182,
+              "lon": 149.2312511
+            },
+            {
+              "title": "Construction of 7 megawatt Engineered Geothermal System (EGS) Project",
+              "project-value": 73000000.0,
+              "technology": "Geothermal",
+              "lat": -30.25,
+              "lon": 139.5323333
+            },
+            {
+              "title": "Cooper Basin Enhanced Geothermal Systems Heat and Power Development",
+              "project-value": 144220000.0,
+              "technology": "Geothermal",
+              "lat": -27.870038,
+              "lon": 140.702484
+            },
+            {
+              "title": "Cost effective gallium arsenide phosphide top solar cell grown on a high performance, low cost silicon solar cell",
+              "project-value": 6310000.0,
+              "technology": "Solar energy",
+              "lat": -33.8654869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Daly River Solar Research Project",
+              "project-value": 853552.0,
+              "technology": "Solar energy",
+              "lat": -13.766118,
+              "lon": 130.710156
+            },
+            {
+              "title": "Data fusion and machine learning for geothermal target exploration and characterisation",
+              "project-value": 6594032.0,
+              "technology": "Geothermal",
+              "lat": -33.8774869,
+              "lon": 151.2079902
+            },
+            {
+              "title": "DeGrussa solar project",
+              "project-value": 40000000.0,
+              "technology": "Solar energy",
+              "lat": -26.5912076,
+              "lon": 118.4967489
+            },
+            {
+              "title": "Delivering higher renewable penetration in new land and housing developments through off-grid microgrids",
+              "project-value": 1100000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -32.4603502,
+              "lon": 150.7679216
+            },
+            {
+              "title": "Demonstrate commercial production of bio-crude oil from biomass",
+              "project-value": 3038000.0,
+              "technology": "Bioenergy",
+              "lat": -33.3582193,
+              "lon": 151.2902004
+            },
+            {
+              "title": "Demonstrate higher efficiency third generation photovoltaics",
+              "project-value": 1600000.0,
+              "technology": "Solar energy",
+              "lat": -33.8664869,
+              "lon": 151.2059902
+            },
+            {
+              "title": "Development and commercialisation of high efficiency silicon solar cell technology",
+              "project-value": 10000000.0,
+              "technology": "Solar energy",
+              "lat": -33.8674869,
+              "lon": 151.2059902
+            },
+            {
+              "title": "Development of a testing facility for storing heat from solar energy at high temperatures",
+              "project-value": 2400000.0,
+              "technology": "Solar energy",
+              "lat": -34.92862119999999,
+              "lon": 138.5989594
+            },
+            {
+              "title": "Development of an Australian solar map",
+              "project-value": 590243.0,
+              "technology": "Solar energy",
+              "lat": -32.8929155,
+              "lon": 151.6983776
+            },
+            {
+              "title": "Development of combined cycle using solar reformed gas",
+              "project-value": 711897.0,
+              "technology": "Solar energy",
+              "lat": -32.8929155,
+              "lon": 151.6993776
+            },
+            {
+              "title": "Doomadgee Solar Project",
+              "project-value": 11903277.0,
+              "technology": "Solar energy",
+              "lat": -17.941667,
+              "lon": 138.828333
+            },
+            {
+              "title": "Energy cost study for Bombora Wave Energy Converter",
+              "project-value": 363326.0,
+              "technology": "Ocean energy",
+              "lat": -32.0012402,
+              "lon": 115.9194718
+            },
+            {
+              "title": "Energy Storage for Commercial Renewable Integration",
+              "project-value": 866297.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -34.92862119999999,
+              "lon": 138.5999594
+            },
+            {
+              "title": "Energy storage test facility and knowledge bank",
+              "project-value": 3264368.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -34.92862119999999,
+              "lon": 138.5999594
+            },
+            {
+              "title": "Enhancing efficiencies in printed solar cells by controlling morphology development",
+              "project-value": 1213000.0,
+              "technology": "Solar energy",
+              "lat": -37.814107,
+              "lon": 144.96328
+            },
+            {
+              "title": "Establishing a South East Region of Renewable Energy Excellence Industry Cluster",
+              "project-value": 728000.0,
+              "technology": "Renewable energy industry capacity building",
+              "lat": -35.282,
+              "lon": 149.128684
+            },
+            {
+              "title": "Fabrication of thermionic device using advanced ceramics",
+              "project-value": 705926.0,
+              "technology": "Solar energy",
+              "lat": -32.925689,
+              "lon": 151.7779205
+            },
+            {
+              "title": "Feasibility study for Perenjori 20MW Dispatchable Solar Tower Project",
+              "project-value": 899436.0,
+              "technology": "Solar energy",
+              "lat": -29.4423983,
+              "lon": 116.2874342
+            },
+            {
+              "title": "Feasibility study into conversion of Collinsville Power Station from coal to hybrid solar thermal/gas",
+              "project-value": 3283910.0,
+              "technology": "Solar energy",
+              "lat": -20.5530485,
+              "lon": 147.8443104
+            },
+            {
+              "title": "Flinders Island Hybrid Energy Hub",
+              "project-value": 12800000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -39.9836386,
+              "lon": 148.052689
+            },
+            {
+              "title": "Forecasting distributed solar energy production",
+              "project-value": 2700000.0,
+              "technology": "Solar energy",
+              "lat": -35.279,
+              "lon": 149.118527
+            },
+            {
+              "title": "Future proofing in Australia's Electricity Distribution Industry",
+              "project-value": 877900.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -37.97841,
+              "lon": 145.206401
+            },
+            {
+              "title": "Generating renewable energy from almond waste",
+              "project-value": 60000.0,
+              "technology": "Bioenergy",
+              "lat": -34.2852369,
+              "lon": 140.6022954
+            },
+            {
+              "title": "High efficiency, multi-junction CPV solar cells on low cost large area silicon substrates",
+              "project-value": 5200000.0,
+              "technology": "Solar energy",
+              "lat": -37.8010469,
+              "lon": 144.9698607
+            },
+            {
+              "title": "High-efficiency silicon/perovskite solar cells",
+              "project-value": 12290605.0,
+              "technology": "Solar energy",
+              "lat": -33.8674869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "High efficiency solar thermal power using Allam cycle",
+              "project-value": 7046100.0,
+              "technology": "Solar energy",
+              "lat": -32.926689,
+              "lon": 151.7789205
+            },
+            {
+              "title": "High-energy algal fuels",
+              "project-value": 11000000.0,
+              "technology": "Bioenergy",
+              "lat": -19.2576268,
+              "lon": 146.8178707
+            },
+            {
+              "title": "High quality laser doping for solar cells through improved characterisation techniques",
+              "project-value": 1218519.0,
+              "technology": "Solar energy",
+              "lat": -35.277699,
+              "lon": 149.12
+            },
+            {
+              "title": "High-temperature solar thermal energy storage via manganese-oxide based redox cycling",
+              "project-value": 3068472.0,
+              "technology": "Solar energy",
+              "lat": -35.282,
+              "lon": 149.128684
+            },
+            {
+              "title": "Hybrid concentrating solar thermal systems for large-scale applications",
+              "project-value": 1070582.0,
+              "technology": "Solar energy",
+              "lat": -37.5320743,
+              "lon": 143.8235591
+            },
+            {
+              "title": "Hybridisation of concentrated solar thermal with carbon capture and storage",
+              "project-value": 2162483.0,
+              "technology": "Solar energy",
+              "lat": -32.925689,
+              "lon": 151.7789205
+            },
+            {
+              "title": "Impact of small scale hydropower technologies on Australian native fish species",
+              "project-value": 1124331.0,
+              "technology": "Hydropower",
+              "lat": -33.885506,
+              "lon": 151.277797
+            },
+            {
+              "title": "Improved high-temperature receivers for dish concentrators",
+              "project-value": 3340000.0,
+              "technology": "Solar energy",
+              "lat": -35.282,
+              "lon": 149.129684
+            },
+            {
+              "title": "Improved measurement of contaminants in silicon solar cells",
+              "project-value": 1000000.0,
+              "technology": "Solar energy",
+              "lat": -33.9080068,
+              "lon": 151.2229804
+            },
+            {
+              "title": "Improving solar cell performance testing",
+              "project-value": 926638.0,
+              "technology": "Solar energy",
+              "lat": -33.8674869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Improving solar-thermal receivers for reduced heat loss",
+              "project-value": 3527985.0,
+              "technology": "Solar energy",
+              "lat": -35.282,
+              "lon": 149.128684
+            },
+            {
+              "title": "Improving translation models for predicting the energy yield of photovoltaic (PV) power systems",
+              "project-value": 3189680.0,
+              "technology": "Solar energy",
+              "lat": -32.8916357,
+              "lon": 151.7287974
+            },
+            {
+              "title": "Industry ready n-type silicon solar cells",
+              "project-value": 10953485.0,
+              "technology": "Solar energy",
+              "lat": -35.2776999,
+              "lon": 149.118527
+            },
+            {
+              "title": "Inline inspection tools for photovoltaic manufacturing",
+              "project-value": 5178333.0,
+              "technology": "Solar energy",
+              "lat": -33.8764869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Integrated PV solar roofing",
+              "project-value": 5050000.0,
+              "technology": "Solar energy",
+              "lat": -34.4800735,
+              "lon": 150.900495
+            },
+            {
+              "title": "Integrated solar radiation data sources over Australia",
+              "project-value": 1430000.0,
+              "technology": "Solar energy",
+              "lat": -35.27614,
+              "lon": 149.146249
+            },
+            {
+              "title": "Intelligent storage for Australia's grid",
+              "project-value": 932487.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -35.3276631,
+              "lon": 149.1763502
+            },
+            {
+              "title": "Investigating a bioenergy alternative for mines",
+              "project-value": 400000.0,
+              "technology": "Bioenergy",
+              "lat": -31.9530044,
+              "lon": 115.8574693
+            },
+            {
+              "title": "Karratha Airport Solar Plant",
+              "project-value": 7100000.0,
+              "technology": "Solar energy",
+              "lat": -20.7366148,
+              "lon": 116.8467646
+            },
+            {
+              "title": "Kidston pumped storage project",
+              "project-value": 6200000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -19.2576268,
+              "lon": 146.8178707
+            },
+            {
+              "title": "King Island Renewable Energy Integration Project",
+              "project-value": 18250000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -39.87534770000001,
+              "lon": 143.9370758
+            },
+            {
+              "title": "Kogan Creek Solar Boost project",
+              "project-value": 104700000.0,
+              "technology": "Solar energy",
+              "lat": -26.7394351,
+              "lon": 150.6250631
+            },
+            {
+              "title": "Least-cost carbon abatement modelling",
+              "project-value": 1230000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -37.798501,
+              "lon": 144.962905
+            },
+            {
+              "title": "Lithium-sulfur batteries for large-scale energy storage",
+              "project-value": 1990000.0,
+              "technology": "Solar energy",
+              "lat": -33.8674869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Local doping using laser chemical processing technology for advanced silicon solar cells",
+              "project-value": 1050000.0,
+              "technology": "Solar energy",
+              "lat": -35.3082894,
+              "lon": 149.1125054
+            },
+            {
+              "title": "Lord Howe Island Hybrid Renewable Energy System",
+              "project-value": 11046065.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -31.537585,
+              "lon": 159.078331
+            },
+            {
+              "title": "Low cost, high efficiency Copper-Zinc-Tin-Sulphide (CZTS) on silicon multi-junction solar cells",
+              "project-value": 6700000.0,
+              "technology": "Solar energy",
+              "lat": -33.8664869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Lowering the cost of high efficiency silicon solar panels",
+              "project-value": 6998124.0,
+              "technology": "Solar energy",
+              "lat": -35.282,
+              "lon": 149.128684
+            },
+            {
+              "title": "Mapping network opportunities for renewable energy",
+              "project-value": 1020003.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -33.8674869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Micro Urban Solar Integrated Concentrators (MUSIC)",
+              "project-value": 13200000.0,
+              "technology": "Solar energy",
+              "lat": -37.8000469,
+              "lon": 144.9698607
+            },
+            {
+              "title": "Model for community-owned solar",
+              "project-value": 45000.0,
+              "technology": "Solar energy",
+              "lat": -34.87844949999999,
+              "lon": 138.6631666
+            },
+            {
+              "title": "Moree Solar Farm",
+              "project-value": 164000000.0,
+              "technology": "Solar energy",
+              "lat": -29.560554,
+              "lon": 149.851924
+            },
+            {
+              "title": "Moreland micro-grid investigation",
+              "project-value": 225800.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -37.767872,
+              "lon": 144.961929
+            },
+            {
+              "title": "Multi-junction silicon solar cells",
+              "project-value": 6030000.0,
+              "technology": "Solar energy",
+              "lat": -33.8674869,
+              "lon": 151.2049902
+            },
+            {
+              "title": "National Community Energy Strategy: Catalysing community renewables in Australia",
+              "project-value": 266280.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -33.882321,
+              "lon": 151.200444
+            },
+            {
+              "title": "New materials and architectures for organic solar cells",
+              "project-value": 1945817.0,
+              "technology": "Solar energy",
+              "lat": -27.4710107,
+              "lon": 153.0234489
+            },
+            {
+              "title": "New photocathodes for solar hydrogen production",
+              "project-value": 1073039.0,
+              "technology": "Solar energy",
+              "lat": -34.809276,
+              "lon": 138.619069
+            },
+            {
+              "title": "Next generation crystalline silicon on glass modules",
+              "project-value": 5343000.0,
+              "technology": "Solar energy",
+              "lat": -33.8684869,
+              "lon": 151.2059902
+            },
+            {
+              "title": "Next generation SLIVER cells",
+              "project-value": 13300000.0,
+              "technology": "Solar energy",
+              "lat": -35.282,
+              "lon": 149.128684
+            },
+            {
+              "title": "Northern Territory Solar Energy Transformation Program",
+              "project-value": 55000000.0,
+              "technology": "Solar energy",
+              "lat": -13.748809,
+              "lon": 130.688658
+            },
+            {
+              "title": "Novel concepts for low cost small heliostats in remote installations",
+              "project-value": 2158071.0,
+              "technology": "Solar energy",
+              "lat": -32.926689,
+              "lon": 151.7789205
+            },
+            {
+              "title": "Novel texture processes for the latest industrial wafer and advanced cell concepts",
+              "project-value": 1302000.0,
+              "technology": "Solar energy",
+              "lat": -33.8764869,
+              "lon": 151.2079902
+            },
+            {
+              "title": "Oceanlinx 1MW Commercial Wave Energy Demonstrator",
+              "project-value": 8018050.0,
+              "technology": "Ocean energy",
+              "lat": -38.0534132,
+              "lon": 140.7024228
+            },
+            {
+              "title": "Optimisation of central receivers for advanced power cycles",
+              "project-value": 2849398.0,
+              "technology": "Solar energy",
+              "lat": -32.8919155,
+              "lon": 151.6983776
+            },
+            {
+              "title": "Optimising thin-film Building Integrated Photovoltaic Thermal for retrofitting",
+              "project-value": 1597320.0,
+              "technology": "Solar energy",
+              "lat": -34.4250728,
+              "lon": 150.8931494
+            },
+            {
+              "title": "Overcoming the fundamental performance limitations of commercial solar cells",
+              "project-value": 15329280.0,
+              "technology": "Solar energy",
+              "lat": -33.8664869,
+              "lon": 151.2079902
+            },
+            {
+              "title": "Participation in the International Energy Agency's Bioenergy program",
+              "project-value": 1098700.0,
+              "technology": "Bioenergy",
+              "lat": -33.8674869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Pathways to Deep Decarbonisation in 2050",
+              "project-value": 934550.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -37.814107,
+              "lon": 144.96328
+            },
+            {
+              "title": "Perth Wave Energy Project",
+              "project-value": 32000000.0,
+              "technology": "Ocean energy",
+              "lat": -32.2429551,
+              "lon": 115.6986301
+            },
+            {
+              "title": "Pilot-scale plant for the production of solar anti-reflection coatings",
+              "project-value": 4800000.0,
+              "technology": "Solar energy",
+              "lat": 37.6807661,
+              "lon": -122.3999715
+            },
+            {
+              "title": "Plasmonics for high efficiency solar cells",
+              "project-value": 5840000.0,
+              "technology": "Solar energy",
+              "lat": -35.28,
+              "lon": 149.118527
+            },
+            {
+              "title": "Plug and play solar power",
+              "project-value": 2900000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -32.8919155,
+              "lon": 151.6993776
+            },
+            {
+              "title": "Port Augusta solar thermal feasibility study",
+              "project-value": 2300000.0,
+              "technology": "Solar energy",
+              "lat": -32.4924399,
+              "lon": 137.7628176
+            },
+            {
+              "title": "Potential network benefits of Concentrating Solar Thermal Power (CSP) in the National Electricity Market (NEM)",
+              "project-value": 272000.0,
+              "technology": "Solar energy",
+              "lat": -33.8784869,
+              "lon": 151.2059902
+            },
+            {
+              "title": "'Power Cube' power tower receiver",
+              "project-value": 1360000.0,
+              "technology": "Solar energy",
+              "lat": -33.8694869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Predicting cloud movements to maximise solar PV use",
+              "project-value": 904000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -23.7002104,
+              "lon": 133.8806114
+            },
+            {
+              "title": "Printing solar cells: A manufacturing proposal for Australia",
+              "project-value": 7241740.0,
+              "technology": "Solar energy",
+              "lat": -37.798501,
+              "lon": 144.961905
+            },
+            {
+              "title": "Production of biofuel from microalgae",
+              "project-value": 2844665.0,
+              "technology": "Bioenergy",
+              "lat": -37.7945414,
+              "lon": 144.9567011
+            },
+            {
+              "title": "Production of Generation 2 ethanol from sugarcane waste",
+              "project-value": 6192876.0,
+              "technology": "Bioenergy",
+              "lat": -33.8145564,
+              "lon": 151.1698948
+            },
+            {
+              "title": "Redeployable Hybrid Power Feasibility Study",
+              "project-value": 820619.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -33.8784869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Redeployable Hybrid Power",
+              "project-value": 1800000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -26.244948526313,
+              "lon": 149.55157867557
+            },
+            {
+              "title": "Reservoir quality in sedimentary geothermal resources",
+              "project-value": 3540000.0,
+              "technology": "Geothermal",
+              "lat": -34.92862119999999,
+              "lon": 138.5999594
+            },
+            {
+              "title": "Roof-mounted hybrid CST system for self-generated heating, cooling and electricity",
+              "project-value": 9500000.0,
+              "technology": "Solar energy",
+              "lat": -35.2819998,
+              "lon": 149.1286843
+            },
+            {
+              "title": "Rottnest Island Water and Renewable Energy Nexus (WREN) project",
+              "project-value": 7300000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -31.9969253,
+              "lon": 115.5400441
+            },
+            {
+              "title": "Solar air turbine systems",
+              "project-value": 15647071.0,
+              "technology": "Solar energy",
+              "lat": -32.925689,
+              "lon": 151.7799205
+            },
+            {
+              "title": "Solar and storage trial at Alkimos Beach residential development",
+              "project-value": 6700000.0,
+              "technology": "Solar energy",
+              "lat": -31.618597,
+              "lon": 115.682746
+            },
+            {
+              "title": "Solar-driven supercritical CO2 Brayton Cycle",
+              "project-value": 5771000.0,
+              "technology": "Solar energy",
+              "lat": -32.924689,
+              "lon": 151.7789205
+            },
+            {
+              "title": "Solar energy management system for utilities",
+              "project-value": 665700.0,
+              "technology": "Solar energy",
+              "lat": -19.240344,
+              "lon": 146.7900173
+            },
+            {
+              "title": "Solar hybrid fuels",
+              "project-value": 3900000.0,
+              "technology": "Solar energy",
+              "lat": -32.927689,
+              "lon": 151.7779205
+            },
+            {
+              "title": "Solar panels for the Australian environment",
+              "project-value": 1210492.0,
+              "technology": "Solar energy",
+              "lat": -35.282,
+              "lon": 149.128684
+            },
+            {
+              "title": "Solar supercritical organic Rankine Cycle for power and industrial heat",
+              "project-value": 1789250.0,
+              "technology": "Solar energy",
+              "lat": -32.927689,
+              "lon": 151.7789205
+            },
+            {
+              "title": "Solar thermal research hub",
+              "project-value": 5000000.0,
+              "technology": "Solar energy",
+              "lat": -32.927689,
+              "lon": 151.7799205
+            },
+            {
+              "title": "Specifying guidelines for assessing next generation solar cells",
+              "project-value": 2211000.0,
+              "technology": "Solar energy",
+              "lat": -32.8916357,
+              "lon": 151.7287974
+            },
+            {
+              "title": "Tandem Quantum Dot solar cells",
+              "project-value": 4500000.0,
+              "technology": "Solar energy",
+              "lat": -33.8674869,
+              "lon": 151.2079902
+            },
+            {
+              "title": "Testing the performance of lithium ion batteries",
+              "project-value": 609000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -35.282,
+              "lon": 149.128684
+            },
+            {
+              "title": "The Australian biomass for bioenergy assessment project",
+              "project-value": 6269000.0,
+              "technology": "Bioenergy",
+              "lat": -35.3109631,
+              "lon": 149.1330612
+            },
+            {
+              "title": "The Hot Carrier solar cell",
+              "project-value": 1300000.0,
+              "technology": "Solar energy",
+              "lat": -33.8684869,
+              "lon": 151.2079902
+            },
+            {
+              "title": "Thermoelectric generator for concentrated solar thermal systems",
+              "project-value": 5262840.0,
+              "technology": "Solar energy",
+              "lat": -32.928689,
+              "lon": 151.7789205
+            },
+            {
+              "title": "Toolkit for community renewable energy funding and financing",
+              "project-value": 493115.0,
+              "technology": "Renewable energy industry capacity building",
+              "lat": -37.813462,
+              "lon": 144.972472
+            },
+            {
+              "title": "Tools for design and scale-up of solar thermochemical reactors",
+              "project-value": 5300000.0,
+              "technology": "Solar energy",
+              "lat": -33.9100068,
+              "lon": 151.2229804
+            },
+            {
+              "title": "Towards a practical Hot Carrier solar cell",
+              "project-value": 6550000.0,
+              "technology": "Solar energy",
+              "lat": -33.8674869,
+              "lon": 151.2089902
+            },
+            {
+              "title": "Towards ultimate performance silicon solar cells",
+              "project-value": 12804047.0,
+              "technology": "Solar energy",
+              "lat": -33.8674869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Trialling a new residential solar PV and battery model",
+              "project-value": 2620000.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -20.2829696,
+              "lon": 148.6882636
+            },
+            {
+              "title": "UltraBattery distributed PV support and UltraBattery for remote area power supply",
+              "project-value": 1207800.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -33.8784869,
+              "lon": 151.2079902
+            },
+            {
+              "title": "Upconversion of the solar spectrum for improved PV energy conversion",
+              "project-value": 2058000.0,
+              "technology": "Solar energy",
+              "lat": -33.8674869,
+              "lon": 151.2069902
+            },
+            {
+              "title": "Utility-scale solar installations: social license to operate in Australia",
+              "project-value": 153388.0,
+              "technology": "Hybrid and enabling technologies",
+              "lat": -33.808859,
+              "lon": 151.1847951
+            },
+            {
+              "title": "Validation of CST solar array performance modelling",
+              "project-value": 1300000.0,
+              "technology": "Solar energy",
+              "lat": -33.4446398,
+              "lon": 147.7186374
+            },
+            {
+              "title": "Vast Solar 6MW concentrating solar thermal pilot project",
+              "project-value": 10066000.0,
+              "technology": "Solar energy",
+              "lat": -33.4446398,
+              "lon": 147.7176374
+            },
+            {
+              "title": "Victorian Wave Partners Wave Power Station",
+              "project-value": 233000000.0,
+              "technology": "Ocean energy",
+              "lat": -38.3463453,
+              "lon": 141.6042096
+            },
+            {
+              "title": "Virtual Power Station 2",
+              "project-value": 2387000.0,
+              "technology": "Solar energy",
+              "lat": -32.926689,
+              "lon": 151.7789205
+            },
+            {
+              "title": "Weipa 6.7MW solar photovoltaic (PV) solar farm",
+              "project-value": 23400000.0,
+              "technology": "Solar energy",
+              "lat": -12.6591475,
+              "lon": 141.8384064
+            },
+            {
+              "title": "Woody biomass harvester",
+              "project-value": 3481069.0,
+              "technology": "Bioenergy",
+              "lat": -27.56433,
+              "lon": 151.9539874
+            },
+            {
+              "title": "Yulara solar project",
+              "project-value": 6500000.0,
+              "technology": "Solar energy",
+              "lat": -25.2416808,
+              "lon": 130.9832123
+            }
+          ]
+        },
+        "mark": {
+          "type": "circle",
+          "tooltip": true,
+          "opacity": 0.7
+        },
+        "encoding": {
+          "longitude": {
+            "field": "lon",
+            "type": "quantitative"
+          },
+          "latitude": {
+            "field": "lat",
+            "type": "quantitative"
+          },
+          "size": {
+            "field": "project-value",
+            "type": "quantitative",
+            "title": "Project Cost ($AUD)",
+            "scale": {
+              "domain": [100000, 500000000],
+              "range": [100, 2000]
+            }
+          },
+          "color": {
+            "field": "technology",
+            "type": "nominal",
+            "legend": {
+              "title": "Technology Type"
+            },
+            "scale": {
+              "domain": ["Bioenergy", "Solar energy", "Ocean energy", "Hybrid and enabling technologies", "Geothermal", "Hydropower", "Renewable energy industry capacity building"],
+              "range": ["#008000", "#FFC000", "#89CFF0", "#191970", "#FF0000", "#1f77b4", "#800080"] 
+            }
+          },
+          "tooltip": [
+            {
+              "field": "title",
+              "type": "nominal",
+              "title": "Project Title"
+            },
+            {
+              "field": "technology",
+              "type": "nominal",
+              "title": "Technology"
+            },
+            {
+              "field": "project-value",
+              "type": "quantitative",
+              "title": "Project Cost"
+            }
+          ]
+        }
+      }
+    ],
+    "projection": {
+      "type": "mercator",
+      "center": [134.0, -25.0],
+      "scale": 1000
+    }
+  }
