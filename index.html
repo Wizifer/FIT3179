@@ -11,20 +11,37 @@
     <script src="vega_lite_vis.js"></script>
 
     <style>
-        /* Center alignment for all div elements */
         body {
             text-align: center;
             font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
         }
-        
+
         #area_chart, #bar_chart {
             display: inline-block;
-            width: 80%; /* Adjust as needed for desired width */
-            margin: 20px auto; /* Adds space around the charts */
+            width: 80%;
+            padding: 20px;
+            margin-bottom: 50px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
         }
 
         h1 {
+            font-size: 28px;
             margin-top: 40px;
+            color: #343a40;
+        }
+
+        p {
+            font-size: 16px;
+            color: #6c757d;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #6c757d;
         }
     </style>
 
@@ -33,9 +50,17 @@
 
 <body>
     <h1>Renewable Energy Graph</h1>
+    <p>This graph shows the growth in renewable energy generation from 2000 to 2022, with significant increases in solar and wind energy since 2010.</p>
+    <p>Add extra info here - Add 1 more graph?</p>
     <div id="area_chart"></div> 
 
     <h1>Renewable Energy Visualizations</h1>
+    <p>The map illustrates renewable energy projects in Australia, categorized by technology type and project cost.</p>
+    <p>Add extra info here</p>
     <div id="bar_chart"></div>
+
+    <footer>
+        <p>Add references here</p>
+    </footer>
 </body>
 </html>
