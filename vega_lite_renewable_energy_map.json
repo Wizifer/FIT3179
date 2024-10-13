@@ -1,40 +1,44 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Map of Renewable Energy Projects in Australia",
-    "title": "Renewable Energy in Australia",
-    "width": 800,
-    "height": 600,
-    "layer": [
-      {
-        "data": {
-          "url": "Aus_state_borders.json",
-          "format": {
-            "type": "topojson",
-            "feature": "ne_110m_admin_0_countries"
-          }
-        },
-        "mark": {
-          "type": "geoshape",
-          "fill": "lightgrey",
-          "stroke": "black",
-          "strokeWidth": 1
-        },
-        "projection": {
-          "type": "mercator",
-          "center": [134.0, -25.0],
-          "scale": 1000
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Map of Renewable Energy Projects in Australia",
+  "title": {
+    "text": "Renewable Energy In Australia",
+    "fontSize": 16,
+    "anchor": "middle"
+  },
+  "width": 800,
+  "height": 600,
+  "layer": [
+    {
+      "data": {
+        "url": "Aus_state_borders.json",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
         }
       },
-      {
-        "data": {
-          "graticule": true
-        },
-        "mark": {
-          "type": "geoshape",
-          "stroke": "grey",
-          "strokeWidth": 0.5
-        }
+      "mark": {
+        "type": "geoshape",
+        "fill": "#f8f8f8",
+        "stroke": "black",
+        "strokeWidth": 1
       },
+      "projection": {
+        "type": "mercator",
+        "center": [134.0, -25.0],
+        "scale": 1000
+      }
+    },
+    {
+      "data": {
+        "graticule": true
+      },
+      "mark": {
+        "type": "geoshape",
+        "stroke": "grey",
+        "strokeWidth": 0.5
+      }
+    },
       {
         "data": {
           "values": [
@@ -1069,74 +1073,106 @@
             }
           ]
         },
-        "transform": [
-          {
-            "calculate": "datum['project-value'] / 1000000",
-            "as": "project_value_millions"
-          }
-        ],
-        "mark": {
-          "type": "circle",
-          "tooltip": true,
-          "opacity": 0.7
+      "transform": [
+        {
+          "calculate": "datum['project-value'] / 1000000",
+          "as": "project_value_millions"
         },
-        "encoding": {
-          "longitude": {
-            "field": "lon",
-            "type": "quantitative"
+        {
+          "filter": "Select_Energy == null || Select_Energy == 'All' || datum.technology == Select_Energy"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "tooltip": true,
+        "opacity": 0.7
+      },
+      "encoding": {
+        "longitude": {
+          "field": "lon",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "lat",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "project-value",
+          "type": "quantitative",
+          "title": "Project Cost (in millions $AUD)",
+          "scale": {
+            "domain": [100000, 500000000],
+            "range": [100, 2000]
           },
-          "latitude": {
-            "field": "lat",
-            "type": "quantitative"
+          "legend": {
+            "format": ".2f",
+            "labelExpr": "datum.value / 1000000 + 'M'"
+          }
+        },
+        "color": {
+          "field": "technology",
+          "type": "nominal",
+          "legend": {
+            "title": "Technology Type"
           },
-          "size": {
-            "field": "project-value",
-            "type": "quantitative",
-            "title": "Project Cost (in millions $AUD)",
-            "scale": {
-              "domain": [100000, 500000000],
-              "range": [100, 2000]
-            },
-            "legend": {
-              "format": ".2f",
-              "labelExpr": "datum.value / 1000000 + 'M'"
-            }
+          "scale": {
+            "domain": ["Bioenergy", "Solar energy", "Ocean energy", "Hybrid and enabling technologies", "Geothermal", "Hydropower", "Renewable capacity Building"],
+            "range": ["#800080", "#FFC000", "#89CFF0", "#BF40BF", "#FF0000", "#1f77b4", "#008000"]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "title",
+            "type": "nominal",
+            "title": "Project Title"
           },
-          "color": {
+          {
             "field": "technology",
             "type": "nominal",
-            "legend": {
-              "title": "Technology Type"
-            },
-            "scale": {
-              "domain": ["Bioenergy", "Solar energy", "Ocean energy", "Hybrid and enabling technologies", "Geothermal", "Hydropower", "Renewable energy industry capacity building"],
-              "range": ["#008000", "#FFC000", "#89CFF0", "#191970", "#FF0000", "#1f77b4", "#800080"] 
-            }
+            "title": "Technology"
           },
-          "tooltip": [
-            {
-              "field": "title",
-              "type": "nominal",
-              "title": "Project Title"
-            },
-            {
-              "field": "technology",
-              "type": "nominal",
-              "title": "Technology"
-            },
-            {
-              "field": "project_value_millions",
-              "type": "quantitative",
-              "title": "Project Cost (Millions $AUD)",
-              "format": ".2f"
-            }
-          ]
-        }
+          {
+            "field": "project_value_millions",
+            "type": "quantitative",
+            "title": "Project Cost (Millions $AUD)",
+            "format": ".2f"
+          }
+        ]
       }
-    ],
+    }
+  ],
   "projection": {
     "type": "mercator",
     "center": [134.0, -25.0],
     "scale": 1000
-  }
+  },
+  "params": [
+    {
+      "name": "Select_Energy",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": [
+          "All",
+          "Bioenergy",
+          "Solar energy",
+          "Ocean energy",
+          "Hybrid and enabling technologies",
+          "Geothermal",
+          "Hydropower",
+          "Renewable energy industry capacity building"
+        ],
+        "labels": [
+          "All Technologies",
+          "Bioenergy",
+          "Solar energy",
+          "Ocean energy",
+          "Hybrid technologies",
+          "Geothermal",
+          "Hydropower",
+          "Industry capacity building"
+        ]
+      }
+    }
+  ]
 }

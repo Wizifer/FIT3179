@@ -12,55 +12,190 @@
 
     <style>
         body {
-            text-align: center;
             font-family: Arial, sans-serif;
             background-color: #f0f2f5;
-        }
-
-        #area_chart, #bar_chart {
-            display: inline-block;
-            width: 80%;
-            padding: 20px;
-            margin-bottom: 50px;
-            background-color: #f8f9fa;
-            border-radius: 10px;
-        }
-
-        h1 {
-            font-size: 28px;
-            margin-top: 40px;
+            margin: 0;
+            padding: 0;
             color: #343a40;
         }
 
-        p {
-            font-size: 16px;
-            color: #6c757d;
-            margin-bottom: 20px;
+        header {
+            text-align: center;
+            padding: 20px;
         }
 
-        footer {
-            margin-top: 30px;
-            font-size: 14px;
-            color: #6c757d;
+        h1 {
+            font-size: 32px;
+            margin-top: 20px;
+            color: #000000;
         }
+
+        p {
+            font-size: 18px;
+            color: #000000;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #b5dac9;
+            margin: 0;
+            padding: 0;
+            color: #343a40;
+        }
+
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 40px 10px;
+        }
+
+        .chart-box {
+            width: 55%;
+            background-color: #f8f9fad3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Align the content to the center */
+            text-align: center;  /* Center the text content */
+        }
+
+        #area_chart {
+            width: 100%;
+            height: 500px;
+        }
+
+        #bar_chart {
+            width: 100%;
+            height: 400px;
+        }
+
+        #map_chart {
+            width: 100%;
+            height: 650px;
+        }
+
+        /* Accessibility and font size adjustments for charts */
+        .vega-actions a {
+            font-size: 14px !important;
+        }
+
+        .footer {
+            width: 55%;
+            background-color: #dbdbdb;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Align the content to the center */
+            text-align: center;  /* Center the text content */
+        }
+
+        .footer-prepared {
+            margin: 0;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .footer-sources, .footer-links {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .footer-link {
+            color: #00a6cf;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            text-decoration: underline;
+        }
+
     </style>
 
     <title>Renewable Energy Visualizations</title>
 </head>
 
 <body>
-    <h1>Renewable Energy Graph</h1>
-    <p>This graph shows the growth in renewable energy generation from 2000 to 2022, with significant increases in solar and wind energy since 2010.</p>
-    <p>Add extra info here - Add 1 more graph?</p>
-    <div id="area_chart"></div> 
+    <header>
+        <h1><strong style="color: #32CD32;">Renewable Energy</strong> in Australia</h1>
+    </header>
 
-    <h1>Renewable Energy Visualizations</h1>
-    <p>The map illustrates renewable energy projects in Australia, categorized by technology type and project cost.</p>
-    <p>Add extra info here</p>
-    <div id="bar_chart"></div>
+    <div class="chart-container">
+        <!-- Area Chart for Renewable Energy Generation -->
+        <div class="chart-box">
+            <h2><strong style="color: #32CD32;">Renewable Energy</strong> Transformation Over Two Decades (1998-2023)</h2>
+            <p>This graph shows the cumulative production of renewable energy sources 
+                (<strong style="color: #BF40BF;">bioenergy</strong>, <strong style="color: #1f77b4;">hydro</strong>, 
+                <strong style="color: #c79a15;">solar</strong>, and <strong style="color: #008000;">wind</strong>) from 1998 to 2023. 
+                Each source of renewable energy is represented by a different color stacked on top of each other, 
+                showing the total energy production for each year.</p>
+                
+            <p>In this graph, we can see that <strong style="color: #c79a15;">solar</strong> and 
+                <strong style="color: #008000;">wind</strong> energy production have seen the most dramatic growth since around 2010. 
+                <strong style="color: #1f77b4;">Hydro</strong> remains relatively stable, while <strong style="color: #BF40BF;">bioenergy</strong> 
+                shows a slow but consistent upward trend. 
+                This also highlights the growing importance of renewable energy, with <strong style="color: #c79a15;">solar</strong> 
+                and <strong style="color: #008000;">wind</strong> 
+                emerging as the dominant contributors to the overall production.</p>
+            <div id="area_chart"></div> 
+        </div>
+    </div>
+    
+    <div class="chart-container">
+        <!-- Bar Chart for Energy Projects -->
+        <div class="chart-box">
+            <h2>Fastest Growing <strong style="color: #32CD32;">Renewable Energy</strong> Sources in Australia</h2>
+            <p>This graph shows the annual percentage change in renewable energy projects across four energy types: 
+                <strong style="color: #1f77b4;">hydro</strong>, <strong style="color: #008000;">wind</strong>, 
+                <strong style="color: #c79a15;">solar</strong>, and <strong style="color: #BF40BF;">bioenergy</strong>, from 1998 to 2023.</p>
+            
+            <p>The graph shows considerable fluctuations, particularly in <strong style="color: #c79a15;">solar</strong> and wind projects, which exhibit 
+                periods of rapid growth followed by stabilization or slower increases. 
+                <strong style="color: #c79a15;">Solar</strong> energy displays particularly sharp 
+                increases in some years, indicating periods of heightened investment or technological 
+                advances. <strong style="color: #008000;">Wind</strong> energy also shows notable surges, though its growth pattern is less volatile than 
+                that of <strong style="color: #c79a15;">solar</strong>. 
+                <strong style="color: #1f77b4;">Hydro</strong> and <strong style="color: #BF40BF;">bioenergy</strong> 
+                on the other hand show smaller and more consistent changes over the years.</p>
+            <div id="bar_chart"></div>
+        </div>
+    </div>
 
-    <footer>
-        <p>Add references here</p>
-    </footer>
+    <!-- Map Chart for Renewable Projects in Australia -->
+    <div class="chart-container">
+        <div class="chart-box">
+            <h2>Map of <strong style="color: #32CD32;">Renewable Energy</strong> Projects</h2>
+            <p>This map illustrates the geographical locations of renewable energy projects across Australia, 
+                categorized by different technologies and their corresponding costs.</p>
+            
+            <p>The other 2 graphs don't show where the growth is happening within Australia and this map fills this gap by 
+                showing the specific locations of renewable energy projects, helping to visualize where investments in 
+                renewable energy are taking place.</p>
+            <div id="map_chart"></div>
+        </div>
+    </div>
+
+    <div class="chart-container">
+        <div class="footer">
+            <p class="footer-prepared">Prepared By Eric Yang Chen (31447554)</p>
+            <p class="footer-sources">
+                Data sources: Australian Government, Department of Climate Change, Energy, the Environment and Water
+            </p>
+            <p class="footer-links">
+                <a href="https://nationalmap.gov.au/renewables/" target="_blank" class="footer-link">The National Map</a> 
+                from the Australian Government | Geoscience Australia
+            </p>
+        </div>
+    </div>
 </body>
 </html>

@@ -1,0 +1,69 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Yearly percentage change in energy sources with side-by-side bars, interactive tooltips, and legend.",
+    "title": {
+    "text": "Renewable Energy Production Percentage Change Over Time",
+    "fontSize": 16,
+    "anchor": "middle"
+    },
+    "data": {
+      "values": [
+        {"Year": "1998-99", "Hydro Change %": null, "Wind Change %": null, "Solar Change %": null, "Bioenergy Change %": null},
+        {"Year": "1999-00", "Hydro Change %": 0.95, "Wind Change %": 107.14, "Solar Change %": 15.38, "Bioenergy Change %": 0.09},
+        {"Year": "2000-01", "Hydro Change %": 1.27, "Wind Change %": 262.07, "Solar Change %": 14.94, "Bioenergy Change %": -43.11},
+        {"Year": "2001-02", "Hydro Change %": -5.19, "Wind Change %": 73.33, "Solar Change %": 16.60, "Bioenergy Change %": 47.29},
+        {"Year": "2002-03", "Hydro Change %": 2.72, "Wind Change %": 93.14, "Solar Change %": 0.00, "Bioenergy Change %": 66.69},
+        {"Year": "2003-04", "Hydro Change %": -0.96, "Wind Change %": 0.27, "Solar Change %": 16.81, "Bioenergy Change %": 13.63},
+        {"Year": "2004-05", "Hydro Change %": -4.40, "Wind Change %": 25.53, "Solar Change %": 14.26, "Bioenergy Change %": 112.83},
+        {"Year": "2005-06", "Hydro Change %": 2.68, "Wind Change %": 93.53, "Solar Change %": 16.01, "Bioenergy Change %": 2.12},
+        {"Year": "2006-07", "Hydro Change %": -9.44, "Wind Change %": 52.47, "Solar Change %": 15.92, "Bioenergy Change %": 1.07},
+        {"Year": "2007-08", "Hydro Change %": -16.47, "Wind Change %": 18.46, "Solar Change %": 17.25, "Bioenergy Change %": 16.26},
+        {"Year": "2008-09", "Hydro Change %": -1.65, "Wind Change %": 23.63, "Solar Change %": 26.71, "Bioenergy Change %": -39.19},
+        {"Year": "2009-10", "Hydro Change %": 14.15, "Wind Change %": 32.07, "Solar Change %": 173.05, "Bioenergy Change %": -0.64},
+        {"Year": "2010-11", "Hydro Change %": 24.12, "Wind Change %": 20.45, "Solar Change %": 260.31, "Bioenergy Change %": -24.33},
+        {"Year": "2011-12", "Hydro Change %": -16.35, "Wind Change %": 14.53, "Solar Change %": 67.17, "Bioenergy Change %": 44.85},
+        {"Year": "2012-13", "Hydro Change %": 29.77, "Wind Change %": 14.19, "Solar Change %": 49.56, "Bioenergy Change %": 3.28},
+        {"Year": "2013-14", "Hydro Change %": 0.83, "Wind Change %": 28.81, "Solar Change %": 15.41, "Bioenergy Change %": 11.33},
+        {"Year": "2014-15", "Hydro Change %": -27.02, "Wind Change %": 11.85, "Solar Change %": 25.23, "Bioenergy Change %": 2.65},
+        {"Year": "2015-16", "Hydro Change %": 13.94, "Wind Change %": 6.39, "Solar Change %": 23.63, "Bioenergy Change %": 5.51},
+        {"Year": "2016-17", "Hydro Change %": 6.31, "Wind Change %": 3.26, "Solar Change %": 18.04, "Bioenergy Change %": -7.64},
+        {"Year": "2017-18", "Hydro Change %": -1.62, "Wind Change %": 20.45, "Solar Change %": 23.04, "Bioenergy Change %": 0.49},
+        {"Year": "2018-19", "Hydro Change %": -0.33, "Wind Change %": 16.75, "Solar Change %": 49.54, "Bioenergy Change %": -0.62},
+        {"Year": "2019-20", "Hydro Change %": -5.13, "Wind Change %": 15.12, "Solar Change %": 39.11, "Bioenergy Change %": -4.14},
+        {"Year": "2020-21", "Hydro Change %": 0.33, "Wind Change %": 20.29, "Solar Change %": 31.76, "Bioenergy Change %": -0.16},
+        {"Year": "2021-22", "Hydro Change %": 11.90, "Wind Change %": 18.67, "Solar Change %": 25.14, "Bioenergy Change %": -4.47},
+        {"Year": "2022-23", "Hydro Change %": -2.02, "Wind Change %": 7.83, "Solar Change %": 20.94, "Bioenergy Change %": -3.04}
+      ]
+    },
+    "transform": [
+      {"fold": ["Hydro Change %", "Wind Change %", "Solar Change %", "Bioenergy Change %"], "as": ["Energy Source", "Percentage Change"]}
+    ],
+    "mark": {"type": "bar", "tooltip": true},
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year",
+        "axis": {"labelAngle": -45}
+      },
+      "y": {
+        "field": "Percentage Change",
+        "type": "quantitative",
+        "title": "Percentage Change (%)"
+      },
+      "color": {
+        "field": "Energy Source",
+        "type": "nominal",
+        "scale": {
+          "domain": ["Hydro Change %", "Wind Change %", "Solar Change %", "Bioenergy Change %"],
+          "range": ["#1f77b4", "#008000", "#FFC000", "#BF40BF"]
+        },
+        "legend": {"title": "Energy Source", "orient": "right"}
+      },
+      "xOffset": {"field": "Energy Source"}
+    },
+    "config": {
+      "view": {"continuousWidth": 500, "continuousHeight": 300},
+      "bar": {"size": 10}
+    }
+}

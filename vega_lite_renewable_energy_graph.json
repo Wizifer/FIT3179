@@ -1,87 +1,92 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "description": "Stacked area chart of renewable energy production with customized colors.",
-    "data": {
-      "values": [
-        {"Year": "1998-99", "Hydro": 16563.0, "Wind": 28.0, "Solar": 37.7, "Bioenergy": 1133.0},
-        {"Year": "1999-00", "Hydro": 16720.0, "Wind": 58.0, "Solar": 43.5, "Bioenergy": 1134.0},
-        {"Year": "2000-01", "Hydro": 16933.0, "Wind": 210.0, "Solar": 50.0, "Bioenergy": 645.0},
-        {"Year": "2001-02", "Hydro": 16054.0, "Wind": 364.0, "Solar": 58.3, "Bioenergy": 950.0},
-        {"Year": "2002-03", "Hydro": 16490.0, "Wind": 703.1, "Solar": 58.3, "Bioenergy": 1583.6},
-        {"Year": "2003-04", "Hydro": 16331.1, "Wind": 705.0, "Solar": 68.1, "Bioenergy": 1799.5},
-        {"Year": "2004-05", "Hydro": 15612.2, "Wind": 885.0, "Solar": 77.8, "Bioenergy": 3830.0},
-        {"Year": "2005-06", "Hydro": 16029.2, "Wind": 1713.1, "Solar": 90.3, "Bioenergy": 3911.0},
-        {"Year": "2006-07", "Hydro": 14517.0, "Wind": 2611.1, "Solar": 104.7, "Bioenergy": 3953.0},
-        {"Year": "2007-08", "Hydro": 12056.9, "Wind": 3093.1, "Solar": 122.8, "Bioenergy": 4596.0},
-        {"Year": "2008-09", "Hydro": 11869.4, "Wind": 3823.8, "Solar": 155.6, "Bioenergy": 2795.2},
-        {"Year": "2009-10", "Hydro": 13548.7, "Wind": 5051.7, "Solar": 424.8, "Bioenergy": 2777.4},
-        {"Year": "2010-11", "Hydro": 16806.7, "Wind": 6084.9, "Solar": 1530.5, "Bioenergy": 2101.7},
-        {"Year": "2011-12", "Hydro": 14083.3, "Wind": 6969.8, "Solar": 2558.6, "Bioenergy": 3043.7},
-        {"Year": "2012-13", "Hydro": 18269.6, "Wind": 7959.6, "Solar": 3826.2, "Bioenergy": 3143.5},
-        {"Year": "2013-14", "Hydro": 18420.9, "Wind": 10251.9, "Solar": 4416.0, "Bioenergy": 3499.4},
-        {"Year": "2014-15", "Hydro": 13445.0, "Wind": 11466.5, "Solar": 5531.3, "Bioenergy": 3592.2},
-        {"Year": "2015-16", "Hydro": 15318.2, "Wind": 12199.5, "Solar": 6838.3, "Bioenergy": 3789.9},
-        {"Year": "2016-17", "Hydro": 16284.9, "Wind": 12597.0, "Solar": 8071.7, "Bioenergy": 3500.5},
-        {"Year": "2017-18", "Hydro": 16020.8, "Wind": 15174.4, "Solar": 9929.9, "Bioenergy": 3517.7},
-        {"Year": "2018-19", "Hydro": 15967.3, "Wind": 17712.0, "Solar": 14848.5, "Bioenergy": 3495.9},
-        {"Year": "2019-20", "Hydro": 15149.6, "Wind": 20395.9, "Solar": 21033.2, "Bioenergy": 3351.6},
-        {"Year": "2020-21", "Hydro": 15199.7, "Wind": 24535.4, "Solar": 27717.0, "Bioenergy": 3346.2},
-        {"Year": "2021-22", "Hydro": 17010.9, "Wind": 29107.8, "Solar": 34686.6, "Bioenergy": 3190.3},
-        {"Year": "2022-23", "Hydro": 16666.1, "Wind": 31384.9, "Solar": 41968.5, "Bioenergy": 3092.8}
-      ]
-    },
-    "params": [
-      {
-        "name": "energyFilter",
-        "value": "All",
-        "bind": {
-          "input": "select",
-          "options": ["All", "Hydro", "Wind", "Solar", "Bioenergy"],
-          "name": "Select Energy Source: "
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Stacked area chart of renewable energy production with customized colors.",
+  "title": {
+    "text": "Renewable Energy Production Over Time",
+    "fontSize": 16,
+    "anchor": "middle"
+  },
+  "data": {
+    "values": [
+      {"Year": "1998-99", "Hydro": 16563.0, "Wind": 28.0, "Solar": 37.7, "Bioenergy": 1133.0},
+      {"Year": "1999-00", "Hydro": 16720.0, "Wind": 58.0, "Solar": 43.5, "Bioenergy": 1134.0},
+      {"Year": "2000-01", "Hydro": 16933.0, "Wind": 210.0, "Solar": 50.0, "Bioenergy": 645.0},
+      {"Year": "2001-02", "Hydro": 16054.0, "Wind": 364.0, "Solar": 58.3, "Bioenergy": 950.0},
+      {"Year": "2002-03", "Hydro": 16490.0, "Wind": 703.1, "Solar": 58.3, "Bioenergy": 1583.6},
+      {"Year": "2003-04", "Hydro": 16331.1, "Wind": 705.0, "Solar": 68.1, "Bioenergy": 1799.5},
+      {"Year": "2004-05", "Hydro": 15612.2, "Wind": 885.0, "Solar": 77.8, "Bioenergy": 3830.0},
+      {"Year": "2005-06", "Hydro": 16029.2, "Wind": 1713.1, "Solar": 90.3, "Bioenergy": 3911.0},
+      {"Year": "2006-07", "Hydro": 14517.0, "Wind": 2611.1, "Solar": 104.7, "Bioenergy": 3953.0},
+      {"Year": "2007-08", "Hydro": 12056.9, "Wind": 3093.1, "Solar": 122.8, "Bioenergy": 4596.0},
+      {"Year": "2008-09", "Hydro": 11869.4, "Wind": 3823.8, "Solar": 155.6, "Bioenergy": 2795.2},
+      {"Year": "2009-10", "Hydro": 13548.7, "Wind": 5051.7, "Solar": 424.8, "Bioenergy": 2777.4},
+      {"Year": "2010-11", "Hydro": 16806.7, "Wind": 6084.9, "Solar": 1530.5, "Bioenergy": 2101.7},
+      {"Year": "2011-12", "Hydro": 14083.3, "Wind": 6969.8, "Solar": 2558.6, "Bioenergy": 3043.7},
+      {"Year": "2012-13", "Hydro": 18269.6, "Wind": 7959.6, "Solar": 3826.2, "Bioenergy": 3143.5},
+      {"Year": "2013-14", "Hydro": 18420.9, "Wind": 10251.9, "Solar": 4416.0, "Bioenergy": 3499.4},
+      {"Year": "2014-15", "Hydro": 13445.0, "Wind": 11466.5, "Solar": 5531.3, "Bioenergy": 3592.2},
+      {"Year": "2015-16", "Hydro": 15318.2, "Wind": 12199.5, "Solar": 6838.3, "Bioenergy": 3789.9},
+      {"Year": "2016-17", "Hydro": 16284.9, "Wind": 12597.0, "Solar": 8071.7, "Bioenergy": 3500.5},
+      {"Year": "2017-18", "Hydro": 16020.8, "Wind": 15174.4, "Solar": 9929.9, "Bioenergy": 3517.7},
+      {"Year": "2018-19", "Hydro": 15967.3, "Wind": 17712.0, "Solar": 14848.5, "Bioenergy": 3495.9},
+      {"Year": "2019-20", "Hydro": 15149.6, "Wind": 20395.9, "Solar": 21033.2, "Bioenergy": 3351.6},
+      {"Year": "2020-21", "Hydro": 15199.7, "Wind": 24535.4, "Solar": 27717.0, "Bioenergy": 3346.2},
+      {"Year": "2021-22", "Hydro": 17010.9, "Wind": 29107.8, "Solar": 34686.6, "Bioenergy": 3190.3},
+      {"Year": "2022-23", "Hydro": 16666.1, "Wind": 31384.9, "Solar": 41968.5, "Bioenergy": 3092.8}
+    ]
+  },
+  "params": [
+    {
+      "name": "energyFilter",
+      "value": "All",
+      "bind": {
+        "input": "select",
+        "options": ["All", "Hydro", "Wind", "Solar", "Bioenergy"],
+        "name": "Select Energy Source: "
       }
-    ],
-    "transform": [
-      {
-        "fold": ["Hydro", "Wind", "Solar", "Bioenergy"],
-        "as": ["Energy Source", "GWh"]
-      },
-      {
-        "filter": "energyFilter == 'All' || datum['Energy Source'] == energyFilter"
-      }
-    ],
-    "mark": {
-      "type": "area",
-      "interpolate": "monotone"
-    },
-    "encoding": {
-      "x": {
-        "field": "Year",
-        "type": "ordinal",
-        "title": "Year",
-        "axis": {"labelAngle": -45}
-      },
-      "y": {
-        "field": "GWh",
-        "type": "quantitative",
-        "title": "Gigawatt hours"
-      },
-      "color": {
-        "field": "Energy Source",
-        "type": "nominal",
-        "scale": {
-          "domain": ["Bioenergy", "Hydro", "Solar", "Wind"],
-          "range": ["#008000", "#1f77b4", "#FFC000", "#191970"]
-        },
-        "legend": {"title": "Energy Source", "orient": "bottom"}
-      },
-      "tooltip": [
-        {"field": "Year", "type": "ordinal"},
-        {"field": "Energy Source", "type": "nominal"},
-        {"field": "GWh", "type": "quantitative"}
-      ]
-    },
-    "config": {
-      "view": {"continuousHeight": 400, "continuousWidth": 600}
     }
+  ],
+  "transform": [
+    {
+      "fold": ["Hydro", "Wind", "Solar", "Bioenergy"],
+      "as": ["Energy Source", "GWh"]
+    },
+    {
+      "filter": "energyFilter == 'All' || datum['Energy Source'] == energyFilter"
+    }
+  ],
+  "mark": {
+    "type": "area",
+    "interpolate": "monotone"
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
+      "axis": {"labelAngle": -45}
+    },
+    "y": {
+      "field": "GWh",
+      "type": "quantitative",
+      "title": "Gigawatt hours"
+    },
+    "color": {
+      "field": "Energy Source",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Bioenergy", "Hydro", "Solar", "Wind"],
+        "range": ["#BF40BF", "#1f77b4", "#FFC000", "#008000"]
+      },
+      "legend": {"title": "Energy Source", "orient": "right"}
+    },
+    "tooltip": [
+      {"field": "Year", "type": "ordinal"},
+      {"field": "Energy Source", "type": "nominal"},
+      {"field": "GWh", "type": "quantitative"}
+    ]
+  },
+  "config": {
+    "view": {"continuousHeight": 400, "continuousWidth": 600}
   }
+}
